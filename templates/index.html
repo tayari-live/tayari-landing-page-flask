@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tayari.Live - Learn African Languages with Joy</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    twemoji.parse(document.body);
+  });
+</script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+<div class="container py-2">
+<a class="navbar-brand fw-bold" href="#"><img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png" height="40" alt="TAYARI" class="d-inline-block"></a>
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+<li class="nav-item"><a class="nav-link px-lg-3" href="#hero">Home</a></li>
+<!-- <li class="nav-item"><a class="nav-link px-lg-3" href="#video">Demo</a></li> -->
+<li class="nav-item"><a class="nav-link px-lg-3" href="#how">How it works</a></li>
+<li class="nav-item"><a class="nav-link px-lg-3" href="#languages">Languages</a></li>
+<li class="nav-item"><a class="nav-link px-lg-3" href="{{ url_for('camp') }}" target="_blank">Camp</a></li>
+<!-- <li class="nav-item"><a class="nav-link px-lg-3" href="https://pricing.tayari.live/" target="_blank">Plans & Pricing</a></li> -->
+<li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+<a href="https://sign-up.tayari.live" class="btn btn-playful rounded-pill px-4 py-2 w-100">
+Try free <i class="fas fa-arrow-right ms-2"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<section id="hero" class="hero-gradient text-white">
+<div class="container">
+<div class="row align-items-center g-4">
+<div class="col-lg-6">
+<h1 class="display-4 fw-bold mb-3">Discover African languages with joy!</h1>
+<p class="lead mb-4 opacity-90">Fun, heartfelt lessons that connect kids to their African roots through play, stories, and interactive learning.</p>
+<div class="d-flex flex-column flex-sm-row gap-3 mb-4">
+<a href="https://sign-up.tayari.live" class="btn btn-playful btn-lg px-4 py-3 rounded-pill shadow-lg">Start free lesson</a>
+<a href="#video" class="btn btn-playful-outline btn-lg px-4 py-3 rounded-pill">Watch demo</a>
+</div>
+</div>
+<div class="col-lg-6 text-center">
+
+<img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749910/image/opt/1600x781%3E/1638710600-3f021c19" class="img-fluid rounded-4 hero-image-animate" alt="Kids Learning" style="max-height:350px;object-fit:contain">
+
+</div>
+</div>
+</div>
+<div class="wave-bottom">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+</svg>
+</div>
+</section>
+
+<section id="video" class="py-5 bg-white position-relative">
+<div class="container py-4 py-md-5">
+<div class="text-center mb-4 mb-md-5">
+<h2 class="display-5 display-md-4 fw-bold mb-3" style="color:var(--brand-blue)">See Tayari.Live in action</h2>
+<p class="lead text-muted mx-auto" style="max-width:700px">Watch how we make learning African languages simple, fun, and engaging for kids.</p>
+</div>
+<div class="row justify-content-center">
+<div class="col-12 col-lg-10">
+<div class="video-wrapper">
+<div class="ratio ratio-16x9 rounded-3 rounded-md-4 overflow-hidden">
+<iframe src="https://www.youtube.com/embed/HqQMoSzwfkI?si=b0eG6KrBmIkhsK5O" title="Tayari.Live Demo" allowfullscreen class="border-0"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how" class="py-5 bg-playful-light position-relative overflow-hidden">
+<div class="wave-top">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,11.71,88.19,13.67V0Z" fill="#ffffff"></path>
+</svg>
+</div>
+
+<div class="container py-4 py-md-5">
+<div class="text-center mb-4 mb-md-5">
+<h2 class="display-5 display-md-4 fw-bold mb-3" style="color:var(--brand-purple)">Get started in 4 simple steps</h2>
+<p class="lead text-muted mx-auto" style="max-width:700px">Your child can begin their language journey in just minutes with our easy process.</p>
+</div>
+
+<div class="row g-3 g-md-4 position-relative">
+<div class="col-12 col-lg-10 mx-auto">
+<div class="step-card step-card-1 mb-3 mb-md-4">
+<div class="d-flex align-items-start gap-3 gap-md-4">
+<div class="step-number">1</div>
+<div>
+<div class="d-flex align-items-center gap-2 gap-md-3 mb-2 mb-md-3">
+<i class="fas fa-user-plus fs-3 fs-md-1" style="color:var(--brand-pink)"></i>
+<h3 class="fw-bold mb-0 h4 h3-md">Sign up free</h3>
+</div>
+<p class="text-muted fs-6 fs-md-5 mb-0">Quick 2-minute registration to start your child's adventure. Create an account, choose your language, and unlock your first free lesson instantly.</p>
+</div>
+</div>
+</div>
+
+<div class="step-offset-right">
+<div class="step-card step-card-2 mb-3 mb-md-4">
+<div class="d-flex align-items-start gap-3 gap-md-4">
+<div class="step-number">2</div>
+<div>
+<div class="d-flex align-items-center gap-2 gap-md-3 mb-2 mb-md-3">
+<i class="fas fa-video fs-3 fs-md-1" style="color:var(--brand-green)"></i>
+<h3 class="fw-bold mb-0 h4 h3-md">Join live classes</h3>
+</div>
+<p class="text-muted fs-6 fs-md-5 mb-0">Practice with native speakers and make friends worldwide. Interactive sessions twice weekly where kids apply what they've learned in a supportive environment.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="step-offset-left">
+<div class="step-card step-card-3 mb-3 mb-md-4">
+<div class="d-flex align-items-start gap-3 gap-md-4">
+<div class="step-number">3</div>
+<div>
+<div class="d-flex align-items-center gap-2 gap-md-3 mb-2 mb-md-3">
+<i class="fas fa-users fs-3 fs-md-1" style="color:var(--brand-yellow)"></i>
+<h3 class="fw-bold mb-0 h4 h3-md">Watch engaging videos</h3>
+</div>
+<p class="text-muted fs-6 fs-md-5 mb-0">Colorful, interactive video lessons designed specifically for young learners. Your child learns at their own pace with fun animations and native speaker pronunciation.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="step-offset-right">
+<div class="step-card step-card-4">
+<div class="d-flex align-items-start gap-3 gap-md-4">
+<div class="step-number">4</div>
+<div>
+<div class="d-flex align-items-center gap-2 gap-md-3 mb-2 mb-md-3">
+<i class="fas fa-globe fs-3 fs-md-1" style="color:var(--brand-blue)"></i>
+<h3 class="fw-bold mb-0 h4 h3-md">Learn anywhere, anytime</h3>
+</div>
+<p class="text-muted fs-6 fs-md-5 mb-0">Access on any device—phone, tablet, or computer. Your family's schedule, your learning pace, anywhere in the world.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="text-center mt-4 mt-md-5">
+<a href="https://sign-up.tayari.live" class="btn btn-lg btn-playful px-4 px-md-5 py-3 rounded-pill shadow-lg">Start your free lesson now <i class="fas fa-arrow-right ms-2"></i></a>
+</div>
+</div>
+</section>
+
+<section id="features" class="py-5 bg-white position-relative">
+<div class="wave-top">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#f8f9ff"></path>
+</svg>
+</div>
+<div class="container py-4 py-md-5">
+<div class="text-center mb-4 mb-md-5">
+<h2 class="display-5 display-md-4 fw-bold mb-3" style="color:var(--brand-blue)">Why parents choose Tayari.Live</h2>
+<p class="lead text-muted mx-auto" style="max-width:700px">For over 3 years, we've made learning African languages fun and meaningful for thousands of kids.</p>
+</div>
+<div class="row g-3 g-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="feature-card text-center shadow-sm">
+<div class="feature-icon" style="background:linear-gradient(135deg,var(--brand-pink),#c21e4a)">
+<i class="fas fa-bullseye"></i>
+</div>
+<h4 class="fw-bold mb-2 mb-md-3 h5 h4-md">Proven method</h4>
+<p class="text-muted mb-0">TPR methodology makes learning natural, just like acquiring a first language. Results you can see in weeks, not years.</p>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="feature-card text-center shadow-sm">
+<div class="feature-icon" style="background:linear-gradient(135deg,var(--brand-blue),#0560a0)">
+<i class="fas fa-user-check"></i>
+</div>
+<h4 class="fw-bold mb-2 mb-md-3 h5 h4-md">Expert native teachers</h4>
+<p class="text-muted mb-0">Native speakers coach kids in live classes for authentic pronunciation and real, measurable progress.</p>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="feature-card text-center shadow-sm">
+<div class="feature-icon" style="background:linear-gradient(135deg,var(--brand-green),#7ab82f)">
+<i class="fas fa-gamepad"></i>
+</div>
+<h4 class="fw-bold mb-2 mb-md-3 h5 h4-md">Play-based learning</h4>
+<p class="text-muted mb-0">Interactive games and activities turn language learning into a fun adventure kids actually beg for more.</p>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="feature-card text-center shadow-sm">
+<div class="feature-icon" style="background:linear-gradient(135deg,var(--brand-purple),#7a1e7a)">
+<i class="fas fa-heart"></i>
+</div>
+<h4 class="fw-bold mb-2 mb-md-3 h5 h4-md">Cultural connection</h4>
+<p class="text-muted mb-0">Every lesson connects kids to their heritage through authentic stories, music, and traditions.</p>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="feature-card text-center shadow-sm">
+<div class="feature-icon" style="background:linear-gradient(135deg,var(--brand-yellow),#d98606)">
+<i class="fas fa-clock"></i>
+</div>
+<h4 class="fw-bold mb-2 mb-md-3 h5 h4-md">Ultimate flexibility</h4>
+<p class="text-muted mb-0">Learn whenever and wherever on any device. Perfect for busy families with flexible schedules.</p>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="feature-card text-center shadow-sm">
+<div class="feature-icon" style="background:linear-gradient(135deg,var(--brand-orange),#d84820)">
+<i class="fas fa-book"></i>
+</div>
+<h4 class="fw-bold mb-2 mb-md-3 h5 h4-md">Complete materials</h4>
+<p class="text-muted mb-0">Fun handouts, audio guides, and practice prompts included with every lesson—no extra costs.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="languages" class="py-5 bg-playful-medium position-relative">
+<div class="wave-top">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,11.71,88.19,13.67V0Z" fill="#ffffff"></path>
+</svg>
+</div>
+<div class="container py-4 py-md-5">
+<div class="text-center mb-4 mb-md-5">
+<h2 class="display-5 display-md-4 fw-bold mb-3" style="color:var(--brand-purple)">Languages to explore</h2>
+<p class="lead text-muted mx-auto" style="max-width:700px">Choose from our vibrant collection of African languages for your child.</p>
+</div>
+<div class="row g-3 g-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="language-card shadow-lg swahili">
+<div class="content">
+<div class="flag-emoji">
+<img src="https://flagcdn.com/w160/ke.png" alt="Kenya Flag" style="width: 80px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+</div>
+<h3 class="fw-bold text-white mb-2">Swahili</h3>
+<span class="badge badge-playful rounded-pill">Available now!</span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="language-card shadow-lg yoruba">
+<div class="content">
+<div class="flag-emoji">
+<img src="https://flagcdn.com/w160/ng.png" alt="Nigeria Flag" style="width: 80px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+</div>
+<h3 class="fw-bold text-white mb-2">Yoruba</h3>
+<span class="badge badge-coming rounded-pill">Coming soon</span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="language-card shadow-lg hausa">
+<div class="content">
+<div class="flag-emoji">
+<img src="https://flagcdn.com/w160/ng.png" alt="Nigeria Flag" style="width: 80px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+</div>
+<h3 class="fw-bold text-white mb-2">Hausa</h3>
+<span class="badge badge-coming rounded-pill">Coming soon</span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="language-card shadow-lg zulu">
+<div class="content">
+<div class="flag-emoji">
+<img src="https://flagcdn.com/w160/za.png" alt="South Africa Flag" style="width: 80px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+</div>
+<h3 class="fw-bold text-white mb-2">Zulu</h3>
+<span class="badge badge-coming rounded-pill">Coming soon</span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="language-card shadow-lg krio">
+<div class="content">
+<div class="flag-emoji">
+<img src="https://flagcdn.com/w160/sl.png" alt="Sierra Leone Flag" style="width: 80px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+</div>
+<h3 class="fw-bold text-white mb-2">Krio</h3>
+<span class="badge badge-coming rounded-pill">Coming soon</span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="language-card shadow-lg shona">
+<div class="content">
+<div class="flag-emoji">
+<img src="https://flagcdn.com/w160/zw.png" alt="Zimbabwe Flag" style="width: 80px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+</div>
+<h3 class="fw-bold text-white mb-2">Shona</h3>
+<span class="badge badge-coming rounded-pill">Coming soon</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<section id="cta" class="cta-section text-white text-center">
+<!-- <div class="wave-top">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,11.71,88.19,13.67V0Z" fill="#f0f9ff"></path>
+</svg>
+</div> -->
+<div class="container py-4 py-md-5">
+<h2 class="display-5 display-md-4 fw-bold mb-3 mb-md-4">Give your child the gift of African languages</h2>
+<p class="lead mb-4 mb-md-5 opacity-90">Join thousands of families using <strong>Tayari.Live</strong> to reconnect kids with culture, heritage, and joy in learning.</p>
+<a href="https://sign-up.tayari.live" class="btn btn-lg btn-playful px-4 px-md-5 py-3 rounded-pill shadow-lg">Start free today <i class="fas fa-arrow-right ms-2"></i></a>
+</div>
+<div class="wave-bottom">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#1a1a2e"></path>
+</svg>
+</div>
+</section>
+
+<footer class="footer-dark text-white">
+<div class="container py-4 py-md-5">
+<div class="row g-4">
+<div class="col-12 col-md-6 col-lg-4"> 
+<a class="navbar-brand fw-bold" href="#"><img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png" height="40" alt="TAYARI" class="d-inline-block"></a>
+<p class="text-white-50">Making African language learning fun, playful, and meaningful for children worldwide.</p>
+</div>
+
+<div class="col-6 col-md-6 col-lg-2">
+  <h5 class="fw-bold mb-3">Explore</h5>
+  <ul class="list-unstyled">
+    <li class="mb-2"><a href="#hero" class="text-white-50 text-decoration-none footer-link">Home</a></li>
+    <li class="mb-2"><a href="#video" class="text-white-50 text-decoration-none footer-link">Demo</a></li>
+    <li class="mb-2"><a href="#how" class="text-white-50 text-decoration-none footer-link">How it works</a></li>
+    <li class="mb-2"><a href="#languages" class="text-white-50 text-decoration-none footer-link">Languages</a></li>
+    <li class="mb-2"><a href="{{ url_for('camp') }}" target="_blank" class="text-white-50 text-decoration-none footer-link">Camp</a></li>
+    <!-- <li class="mb-2"><a href="https://pricing.tayari.live/" target="_blank" class="text-white-50 text-decoration-none footer-link">Plans & Pricing</a></li> -->
+  </ul>
+</div>
+
+
+<div class="col-6 col-md-6 col-lg-3">
+<h5 class="fw-bold mb-3">Contact</h5>
+<ul class="list-unstyled">
+<li class="mb-2">
+<a href="mailto:support@tayari.live" class="footer-link text-white-50 text-decoration-none">
+<i class="fas fa-envelope me-2"></i> support@tayari.live
+</a>
+</li>
+<li class="mb-2">
+<a href="tel:+2348001234567" class="footer-link text-white-50 text-decoration-none">
+<i class="fas fa-phone me-2"></i> +234 800 123 4567
+</a>
+</li>
+<li class="mb-2 text-white-50"><i class="fas fa-map-marker-alt me-2"></i> Upani Diani, Palm Park 1, Diani, Kwale, South Coast, Kenya</li>
+</ul>
+</div>
+
+<div class="col-12 col-md-6 col-lg-3">
+<h5 class="fw-bold mb-3">Follow us</h5>
+<div class="d-flex gap-3">
+  <a target="_blank" href="https://www.facebook.com/tayarilive/" class="text-white-50 fs-4 footer-link"><i class="fab fa-facebook"></i></a>
+  <a target="_blank" href="https://www.instagram.com/tayarilive/" class="text-white-50 fs-4 footer-link"><i class="fab fa-instagram"></i></a>
+  <a target="_blank" href="https://www.linkedin.com/company/tayarilive" class="text-white-50 fs-4 footer-link"><i class="fab fa-linkedin"></i></a>
+  <a target="_blank" href="https://www.youtube.com/@tayarilive-swahililearning1184" class="text-white-50 fs-4 footer-link"><i class="fab fa-youtube"></i></a>
+  <a href="https://x.com/tayari_live" class="text-white-50 fs-4 footer-link"><i class="fab fa-x-twitter"></i></a>
+  <!-- <a href="#" class="text-white-50 fs-4 footer-link"><i class="fab fa-tiktok"></i></a> -->
+</div>
+</div>
+</div>
+<hr class="border-secondary mt-4 mt-md-5">
+<div class="text-center text-white-50 small">© <span id="year"></span> Tayari.Live. All rights reserved.</div>
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

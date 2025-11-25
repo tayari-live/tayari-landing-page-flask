@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tayari.live Swahili Camp 2025</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png">
+<style>
+:root {
+  --brand-pink: #d72a58;
+  --brand-blue: #0777bc;
+  --brand-purple: #932390;
+  --brand-green: #8ec83d;
+  --brand-orange: #f25925;
+  --brand-yellow: #f19707;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar - matching homepage */
+.navbar {
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  position: relative;
+  color: #333 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(135deg, var(--brand-blue), #0560a0);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--brand-blue) !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.btn-playful {
+  background: linear-gradient(135deg, var(--brand-green), #7ab82f);
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-playful:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(142, 200, 61, .4);
+  color: white;
+}
+
+/* Hero Section - matching homepage gradient */
+.hero-gradient {
+  /* background: linear-gradient(135deg, var(--brand-purple) 0%, var(--brand-orange) 50%, var(--brand-pink) 100%); */
+  background-color: transparent;
+  background-image: url("https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/16553141/image/opt/original/1698779525-64f3954a");
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 120px 0 100px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 300;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Wave dividers - matching homepage */
+.wave-top, .wave-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-top {
+  top: -1px;
+}
+
+.wave-bottom {
+  bottom: -1px;
+  transform: rotate(180deg);
+}
+
+.wave-top svg, .wave-bottom svg {
+  position: relative;
+  display: block;
+  width: 120%;
+  height: 60px;
+}
+
+@media(min-width: 768px) {
+  .wave-top svg, .wave-bottom svg {
+    height: 100px;
+  }
+}
+
+/* Backgrounds - matching homepage */
+.bg-playful-light {
+  background: linear-gradient(135deg, #f8f9ff 0%, #fff5f8 100%);
+}
+
+.bg-playful-medium {
+  background: linear-gradient(135deg, #fff9f0 0%, #f0f9ff 100%);
+}
+
+/* Date Cards - playful style */
+.date-card {
+  background: white;
+  border-radius: 25px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.date-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.date-card:hover {
+  transform: translateY(-10px) rotate(-2deg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: var(--brand-pink);
+}
+
+.date-card:hover::before {
+  opacity: 1;
+}
+
+.date-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .hero-gradient {
+    min-height: 70vh;
+    padding: 100px 0 80px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Feature cards stack vertically on mobile */
+  .col-6.col-lg-3 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Center feature cards on mobile */
+  .feature-card {
+    margin: 0 auto;
+  }
+
+  /* Date cards also stack on smaller screens */
+  .col-12.col-md-6.col-lg-5 {
+    max-width: 100% !important;
+  }
+
+  /* Pricing cards stack */
+  .col-12.col-lg-5 {
+    max-width: 100% !important;
+  }
+
+  /* Schedule cards stack */
+  .col-12.col-lg-4 {
+    max-width: 100% !important;
+  }
+
+  /* Testimonial cards stack */
+  .col-12.col-md-6.col-lg-4 {
+    max-width: 100% !important;
+  }
+
+  /* Adjust video and form sections */
+  .col-12.col-lg-6 {
+    max-width: 100% !important;
+  }
+
+  .col-12.col-lg-8 {
+    max-width: 100% !important;
+  }
+
+  /* Button text size on mobile */
+  .btn-modern {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  /* Heading sizes on mobile */
+  .display-4 {
+    font-size: 1.75rem !important;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Feature Cards - matching homepage style */
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Pricing Cards - playful version */
+.pricing-card {
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 3px solid transparent;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px) rotate(1deg);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+  border-color: var(--brand-yellow);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--brand-yellow);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.price-header {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.old-price {
+  font-size: 2rem;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.current-price {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.price-body {
+  padding: 2.5rem;
+}
+
+.price-feature {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 2px dashed #e2e8f0;
+}
+
+.price-feature:last-child {
+  border-bottom: none;
+}
+
+.price-feature i {
+  font-size: 1.3rem;
+  margin-right: 1rem;
+}
+
+/* Video Section */
+.video-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, var(--brand-blue), #0560a0);
+  padding: 6px;
+}
+
+.video-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4/3;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay i {
+  color: white;
+  font-size: 3rem;
+}
+
+/* Schedule Cards */
+.schedule-card {
+  background: white;
+  border-radius: 25px;
+  padding: 2.5rem;
+  height: fit-content;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.schedule-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--brand-green);
+}
+
+.schedule-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.schedule-card ul li {
+  padding: 0.75rem 0;
+  border-bottom: 2px dashed #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.schedule-card ul li:last-child {
+  border-bottom: none;
+}
+
+/* Buttons - playful versions */
+.btn-modern {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-pink {
+  background: linear-gradient(135deg, var(--brand-pink), #c21e4a);
+  color: white;
+  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
+}
+
+.btn-pink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(233, 30, 99, 0.4);
+  color: white;
+}
+
+.btn-orange {
+  background: linear-gradient(135deg, var(--brand-orange), #d84820);
+  color: white;
+  box-shadow: 0 8px 20px rgba(239, 104, 32, 0.3);
+}
+
+.btn-orange:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(239, 104, 32, 0.4);
+  color: white;
+}
+
+.btn-blue {
+  background: linear-gradient(135deg, var(--brand-blue), #0560a0);
+  color: white;
+  box-shadow: 0 8px 20px rgba(8, 145, 218, 0.3);
+}
+
+.btn-blue:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(8, 145, 218, 0.4);
+  color: white;
+}
+
+.btn-hero {
+  background: linear-gradient(135deg, var(--brand-green), #7ab82f);
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(142, 200, 61, 0.3);
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+.btn-hero:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(142, 200, 61, 0.4);
+  color: white;
+}
+
+/* Form Styles */
+.form-control {
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--brand-pink);
+  box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.15);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-orange), var(--brand-pink));
+  position: relative;
+  padding: 100px 0 !important;
+}
+
+/* Footer - matching homepage */
+.footer-dark {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  position: relative;
+  padding: 60px 0 20px;
+  color: white;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--brand-green) !important;
+  transform: translateX(5px);
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.social-icons a:hover {
+  background: var(--brand-pink);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid var(--brand-pink);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-stars {
+  color: var(--brand-yellow);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-pink), var(--brand-orange));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.testimonial-name {
+  font-weight: 700;
+  color: #2d3748;
+  font-size: 0.95rem;
+}
+
+.testimonial-role {
+  color: #718096;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-gradient {
+    min-height: 70vh;
+    padding: 100px 0 80px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+<div class="container py-2">
+<a class="navbar-brand fw-bold" href="/">
+  <img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png" height="40" alt="TAYARI Logo">
+</a>
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+<li class="nav-item"><a class="nav-link px-lg-3" href="#dates">Dates</a></li>
+<li class="nav-item"><a class="nav-link px-lg-3" href="#why">Why Join</a></li>
+<li class="nav-item"><a class="nav-link px-lg-3" href="#gallery">Gallery</a></li>
+<li class="nav-item"><a class="nav-link px-lg-3" href="#schedule">Schedule</a></li>
+<!-- <li class="nav-item"><a class="nav-link px-lg-3" href="#pricing">Pricing</a></li> -->
+<li class="nav-item"><a class="nav-link px-lg-3" href="#contact">Contact</a></li>
+<li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+  <a href="#pricing" class="btn btn-playful rounded-pill px-4 py-2 w-100">
+    Register Now <i class="fas fa-arrow-right ms-2"></i>
+  </a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-gradient text-white">
+<div class="container">
+<div class="hero-content">
+<h1 class="hero-title">SWAHILI Camp 2025</h1>
+<p class="hero-subtitle">Bring Fun <span style="color: var(--brand-yellow);">2</span> Life!</p>
+<div class="hero-badge">
+  <i class="fas fa-users me-2"></i> Ages 7-16 years
+</div>
+<a href="#dates" class="btn btn-hero">
+  Explore Dates <i class="fas fa-arrow-down ms-2"></i>
+</a>
+</div>
+</div>
+<div class="wave-bottom">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+</svg>
+</div>
+</section>
+
+<!-- Dates Section -->
+<section id="dates" class="py-5 bg-white position-relative">
+<div class="container py-5">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold" style="color: var(--brand-purple);">Camp Dates & Locations</h2>
+<p class="lead text-muted mt-3">Choose the perfect camp session for your child</p>
+</div>
+<div class="row g-4 justify-content-center">
+<div class="col-12 col-md-6 col-lg-5">
+<div class="date-card">
+<div class="date-icon" style="background: linear-gradient(135deg, var(--brand-pink), #c21e4a);">
+<i class="fas fa-calendar-alt"></i>
+</div>
+<h4 class="fw-bold text-center mb-3">CAMP 1</h4>
+<div class="fs-4 fw-bold text-center mb-2" style="color: var(--brand-pink);">Nov 30 - Dec 4, 2025</div>
+<div class="fs-5 text-center mb-2" style="color: var(--brand-blue);">📍 Diani, Ukunda, Kenya</div>
+<div class="text-muted text-center mb-4"><small>Ages 7-16 years</small></div>
+<a href="#pricing" class="btn btn-pink btn-modern w-100">Register Now</a>
+</div>
+</div>
+<div class="col-12 col-md-6 col-lg-5">
+<div class="date-card">
+<div class="date-icon" style="background: linear-gradient(135deg, var(--brand-blue), #0560a0);">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<h4 class="fw-bold text-center mb-3">CAMP 2</h4>
+<div class="fs-4 fw-bold text-center mb-2" style="color: var(--brand-blue);">June 2026<br><span class="fs-5">TBA</span></div>
+<div class="fs-5 text-center mb-2" style="color: var(--brand-blue);">📍 Location TBD</div>
+<div class="text-muted text-center mb-4"><small>Ages 7-16 years</small></div>
+<button class="btn btn-blue btn-modern w-100" disabled>Coming Soon</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Why Join Section -->
+<section id="why" class="py-5 bg-playful-light position-relative">
+<div class="wave-top">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,11.71,88.19,13.67V0Z" fill="#ffffff"></path>
+</svg>
+</div>
+<div class="container py-5">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold" style="color: var(--brand-purple);">Why Join The Swahili Camp?</h2>
+<p class="lead text-muted mt-3 mx-auto" style="max-width: 700px;">Get your kids fluent in Swahili through fun, games, and immersive learning!</p>
+</div>
+<div class="row g-4">
+<div class="col-6 col-lg-3">
+<div class="feature-card text-center">
+<div class="feature-icon" style="background: linear-gradient(135deg, var(--brand-pink), #c21e4a);">
+  <i class="fas fa-utensils"></i>
+</div>
+<h4 class="mb-3">Delicious Meals</h4>
+<p class="text-muted mb-0">Authentic Swahili cuisine freshly prepared. Kids learn the culture while enjoying tasty traditional meals!</p>
+</div>
+</div>
+<div class="col-6 col-lg-3">
+<div class="feature-card text-center">
+<div class="feature-icon" style="background: linear-gradient(135deg, var(--brand-green), #7ab82f);">
+  <i class="fas fa-theater-masks"></i>
+</div>
+<h4 class="mb-3">Fun Programs</h4>
+<p class="text-muted mb-0">Our motto: "Why not have fun while learning!" Wait and see how much fun your kids will have!</p>
+</div>
+</div>
+<div class="col-6 col-lg-3">
+<div class="feature-card text-center">
+<div class="feature-icon" style="background: linear-gradient(135deg, var(--brand-blue), #0560a0);">
+  <i class="fas fa-chalkboard-teacher"></i>
+</div>
+<h4 class="mb-3">Expert Teachers</h4>
+<p class="text-muted mb-0">Professionally trained native speakers with years of experience using proven TPR methodology.</p>
+</div>
+</div>
+<div class="col-6 col-lg-3">
+<div class="feature-card text-center">
+<div class="feature-icon" style="background: linear-gradient(135deg, var(--brand-orange), #d84820);">
+  <i class="fas fa-gamepad"></i>
+</div>
+<h4 class="mb-3">Educational Games</h4>
+<p class="text-muted mb-0">Beach volleyball, tug-of-war, and more! Plus discounted access to our companion web app.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Video Section -->
+<section id="video" class="py-5 bg-white position-relative">
+<div class="wave-top">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#f8f9ff"></path>
+</svg>
+</div>
+<div class="container py-5">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold" style="color: var(--brand-pink);">See The Camp in Action!</h2>
+<p class="lead text-muted mt-3">Experience the fun through the eyes of previous participants</p>
+</div>
+<div class="row g-4 mb-5">
+<div class="col-12 col-lg-6">
+<div class="video-wrapper">
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.youtube.com/embed/FiKTZayXFyQ" title="Swahili Camp for Kids" allowfullscreen class="border-0"></iframe>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="video-wrapper">
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.youtube.com/embed/Tt3KRMKIyq4" title="Camp Introduction" allowfullscreen class="border-0"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-5 bg-playful-light position-relative">
+<div class="wave-top">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,11.71,88.19,13.67V0Z" fill="#ffffff"></path>
+</svg>
+</div>
+<div class="container py-5">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold" style="color: var(--brand-orange);">Camp Photo Gallery 📸</h2>
+<p class="lead text-muted mt-3">Memorable moments from previous camps</p>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item">
+<img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/16553141/image/opt/original/1698779525-64f3954a" alt="Kids playing beach games">
+<!-- <div class="gallery-overlay">
+  <i class="fas fa-search-plus"></i>
+</div> -->
+</div>
+<div class="gallery-item">
+<img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/16515806/image/opt/1600x1200%3E/1696857913-8b6a31e7" alt="Beach activities and water sports">
+<!-- <div class="gallery-overlay">
+  <i class="fas fa-search-plus"></i>
+</div> -->
+</div>
+<div class="gallery-item">
+<img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/16553154/image/opt/original/1698779655-c6ab2f13" alt="Language learning session">
+<!-- <div class="gallery-overlay">
+  <i class="fas fa-search-plus"></i>
+</div> -->
+</div>
+<div class="gallery-item">
+<img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/16513190/image/opt/1600x1066%3E/1696629155-9e5b661b" alt="Group photo of camp participants">
+<!-- <div class="gallery-overlay">
+  <i class="fas fa-search-plus"></i>
+</div> -->
+</div>
+<div class="gallery-item">
+<img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/16553148/image/opt/original/1698779607-cd7edc72" alt="Camp team activities and bonding">
+<!-- <div class="gallery-overlay">
+  <i class="fas fa-search-plus"></i>
+</div> -->
+</div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80" alt="Children learning together in classroom">
+<!-- <div class="gallery-overlay">
+  <i class="fas fa-search-plus"></i>
+</div> -->
+</div>
+</div>
+</div>
+</section>
+
+<!-- Schedule Section -->
+<section id="schedule" class="py-5 bg-white position-relative">
+<div class="wave-top">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#fff5f8"></path>
+</svg>
+</div>
+<div class="container py-5">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold" style="color: var(--brand-purple);">Daily Schedule ⏰</h2>
+<p class="lead text-muted mt-3 mx-auto" style="max-width: 700px;">A sneak peek into what your kids will experience each day</p>
+</div>
+<div class="row g-4">
+<div class="col-12 col-lg-4">
+<div class="schedule-card">
+<h3 class="fw-bold" style="color: var(--brand-pink); font-size: 1.3rem;">📚 Immersion Learning</h3>
+<p class="text-muted mt-3">Every day includes hours of fun learning through song, dance, and games. As an immersion camp, kids hear and speak simple Swahili with prompts from counselors throughout the day. They'll be amazed at how much they can understand and speak by the end of camp!</p>
+</div>
+</div>
+<div class="col-12 col-lg-4">
+<div class="schedule-card">
+<h3 class="fw-bold" style="color: var(--brand-green);">⏱️ Sample Daily Schedule</h3>
+<ul class="list-unstyled mt-3">
+<li><strong>07:30 AM</strong> - Wake up & freshen up</li>
+<li><strong>08:00 AM</strong> - Breakfast 🥣</li>
+<li><strong>09:00 AM</strong> - Morning icebreaker games</li>
+<li><strong>09:30 AM</strong> - Language class & activities</li>
+<li><strong>10:30 AM</strong> - Snack time 🍌</li>
+<li><strong>11:00 AM</strong> - Outdoor language games</li>
+<li><strong>12:30 PM</strong> - Lunch 🍲</li>
+<li><strong>01:30 PM</strong> - Free time & rest</li>
+<li><strong>03:00 PM</strong> - Afternoon snack 🧁</li>
+<li><strong>03:30 PM</strong> - Beach activities</li>
+<li><strong>05:30 PM</strong> - Shower time</li>
+<li><strong>06:30 PM</strong> - Dinner & evening activities</li>
+</ul>
+</div>
+</div>
+<div class="col-12 col-lg-4">
+<div class="schedule-card">
+<h3 class="fw-bold" style="color: var(--brand-blue);">🎮 Fun Activities</h3>
+<ul class="list-unstyled mt-3">
+<li class="mb-3">🎭 <strong>Charades in Swahili</strong><br><span class="text-muted" style="font-size: 0.9rem;">Act out words and phrases</span></li>
+<li class="mb-3">🚩 <strong>Capture the Flag</strong><br><span class="text-muted" style="font-size: 0.9rem;">Swahili edition with fun twists</span></li>
+<li class="mb-3">🍽️ <strong>Meal Time</strong><br><span class="text-muted" style="font-size: 0.9rem;">Learn Swahili food names & cooking</span></li>
+<li class="mb-3">🏐 <strong>Beach Volleyball</strong><br><span class="text-muted" style="font-size: 0.9rem;">Learn sports vocabulary in Swahili</span></li>
+<li class="mb-3">🎬 <strong>Movie Night</strong><br><span class="text-muted" style="font-size: 0.9rem;">Swahili dubbed films & discussions</span></li>
+<li>🎵 <strong>Cultural Music & Dance</strong><br><span class="text-muted" style="font-size: 0.9rem;">Learn traditional Swahili moves</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-5 bg-playful-medium position-relative">
+<div class="wave-top">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,11.71,88.19,13.67V0Z" fill="#ffffff"></path>
+</svg>
+</div>
+<div class="container py-5">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold" style="color: var(--brand-purple);">Camp Pricing 💰</h2>
+<p class="lead text-muted mt-3">Affordable options for every family</p>
+</div>
+<div class="row g-4 justify-content-center">
+<div class="col-12 col-lg-5">
+<div class="pricing-card">
+<div class="pricing-badge">EARLY BIRD OFFER!</div>
+<div class="price-header" style="background: linear-gradient(135deg, var(--brand-pink), #c21e4a);">
+<div class="old-price">$450</div>
+<div class="current-price">$390</div>
+<p class="mb-0" style="font-size: 1.1rem;">5-Day Residential Camp</p>
+</div>
+<div class="price-body">
+<h4 class="fw-bold mb-4" style="color: var(--brand-pink);">✨ What's Included</h4>
+<div class="price-feature">
+  <i class="fas fa-check-circle" style="color: var(--brand-green);"></i>
+  <div><strong>Full Board Accommodation</strong><br><span style="font-size: 0.9rem; color: #718096;">Comfortable rooms with 24/7 care</span></div>
+</div>
+<div class="price-feature">
+  <i class="fas fa-check-circle" style="color: var(--brand-green);"></i>
+  <div><strong>All Meals & Snacks</strong><br><span style="font-size: 0.9rem; color: #718096;">Authentic Swahili cuisine</span></div>
+</div>
+<div class="price-feature">
+  <i class="fas fa-check-circle" style="color: var(--brand-green);"></i>
+  <div><strong>All Activities & Games</strong><br><span style="font-size: 0.9rem; color: #718096;">Beach, sports, cultural activities</span></div>
+</div>
+<div class="price-feature">
+  <i class="fas fa-check-circle" style="color: var(--brand-green);"></i>
+  <div><strong>Language Lessons</strong><br><span style="font-size: 0.9rem; color: #718096;">With native speaker teachers</span></div>
+</div>
+<div class="price-feature">
+  <i class="fas fa-check-circle" style="color: var(--brand-green);"></i>
+  <div><strong>Learning Materials</strong><br><span style="font-size: 0.9rem; color: #718096;">Workbooks & digital resources</span></div>
+</div>
+<a href="#contact" class="btn btn-pink btn-modern w-100 mt-4">Book Full Camp</a>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-5">
+<div class="pricing-card">
+<div class="pricing-badge">SAVE $80!</div>
+<div class="price-header" style="background: linear-gradient(135deg, var(--brand-blue), #0560a0);">
+<div class="old-price">$270</div>
+<div class="current-price">$190</div>
+<p class="mb-0" style="font-size: 1.1rem;">5-Day Day Camp</p>
+</div>
+<div class="price-body">
+<h4 class="fw-bold mb-4" style="color: var(--brand-blue);">✨ What's Included</h4>
+<div class="price-feature">
+  <i class="fas fa-check-circle" style="color: var(--brand-green);"></i>
+  <div><strong>Lunch & Daily Snacks</strong><br><span style="font-size: 0.9rem; color: #718096;">Nutritious meals provided</span></div>
+</div>
+<div class="price-feature">
+  <i class="fas fa-check-circle" style="color: var(--brand-green);"></i>
+  <div><strong>All Activities & Games</strong><br><span style="font-size: 0.9rem; color: #718096;">Fun all day long</span></div>
+</div>
+<div class="price-feature">
+  <i class="fas fa-check-circle" style="color: var(--brand-green);"></i>
+  <div><strong>Language Lessons</strong><br><span style="font-size: 0.9rem; color: #718096;">Interactive & engaging sessions</span></div>
+</div>
+<div class="price-feature">
+  <i class="fas fa-check-circle" style="color: var(--brand-green);"></i>
+  <div><strong>Learning Materials</strong><br><span style="font-size: 0.9rem; color: #718096;">Take home resources</span></div>
+</div>
+<div class="price-feature">
+  <i class="fas fa-check-circle" style="color: var(--brand-green);"></i>
+  <div><strong>Beach & Water Activities</strong><br><span style="font-size: 0.9rem; color: #718096;">Safe & supervised fun</span></div>
+</div>
+<a href="#contact" class="btn btn-blue btn-modern w-100 mt-4">Book Day Camp</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section>
+<div class="text-center mb-5 mt-5">
+<h3 class="fw-bold" style="color: var(--brand-purple); font-size: 2rem;">What Parents Say 🎉</h3>
+<p class="text-muted lead">Real experiences from families who've joined us</p>
+</div>
+
+<div class="row g-4 mb-5">
+<div class="col-12 col-lg-6">
+<div class="video-wrapper">
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.youtube.com/embed/FiKTZayXFyQ" title="Swahili Camp for Kids" allowfullscreen class="border-0"></iframe>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="video-wrapper">
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.youtube.com/embed/Tt3KRMKIyq4" title="Camp Introduction" allowfullscreen class="border-0"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact & Registration Section -->
+<section id="contact" class="py-5 bg-white position-relative">
+<div class="wave-top">
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#fff5f8"></path>
+</svg>
+</div>
+<div class="container py-5">
+<div class="text-center mb-5">
+<h2 class="display-4 fw-bold" style="color: var(--brand-blue);">Ready to Register? 🎉</h2>
+<p class="lead text-muted mt-3">Secure your child's spot at Swahili Camp 2025</p>
+</div>
+<div class="row justify-content-center">
+<div class="col-12 col-lg-8">
+<div class="card border-0 shadow-lg rounded-4 p-4 p-md-5" style="background: linear-gradient(135deg, rgba(248, 249, 255, 1), rgba(255, 245, 248, 1));">
+<form id="campForm">
+<div class="row g-4">
+<div class="col-12 col-md-6">
+  <label for="childName" class="form-label fw-semibold mb-2">Child's Name *</label>
+  <input type="text" class="form-control" id="childName" name="childName" placeholder="Enter child's name" required>
+</div>
+<div class="col-12 col-md-6">
+  <label for="age" class="form-label fw-semibold mb-2">Age *</label>
+  <select class="form-select" id="age" name="age" required>
+    <option value="">Select age</option>
+    <option value="7-9">7-9 years</option>
+    <option value="10-13">10-13 years</option>
+    <option value="14-16">14-16 years</option>
+  </select>
+</div>
+<div class="col-12 col-md-6">
+  <label for="parentName" class="form-label fw-semibold mb-2">Parent/Guardian Name *</label>
+  <input type="text" class="form-control" id="parentName" name="parentName" placeholder="Your name" required>
+</div>
+<div class="col-12 col-md-6">
+  <label for="email" class="form-label fw-semibold mb-2">Email Address *</label>
+  <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
+</div>
+<div class="col-12">
+  <label for="phone" class="form-label fw-semibold mb-2">Phone Number *</label>
+  <input type="tel" class="form-control" id="phone" name="phone" placeholder="+1 (555) 000-0000" required>
+</div>
+<div class="col-12">
+  <label for="campType" class="form-label fw-semibold mb-2">Which camp are you interested in? *</label>
+  <select class="form-select" id="campType" name="campType" required>
+    <option value="">Select camp type</option>
+    <option value="residential">Residential Camp (Nov 30 - Dec 4) - $390</option>
+    <option value="daycamp">Day Camp (Nov 30 - Dec 4) - $190</option>
+  </select>
+</div>
+<div class="col-12">
+  <label for="message" class="form-label fw-semibold mb-2">Special Requests or Questions</label>
+  <textarea class="form-control" id="message" name="message" rows="3" placeholder="Any dietary restrictions, allergies, or special needs?"></textarea>
+</div>
+<div class="col-12">
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="agree" name="agree" required>
+    <label class="form-check-label" for="agree">
+      I agree to the camp <strong>terms and conditions</strong> and want to receive updates about the camp
+    </label>
+  </div>
+</div>
+<div class="col-12">
+  <button type="submit" class="btn btn-pink btn-modern w-100">
+    Complete Registration <i class="fas fa-rocket ms-2"></i>
+  </button>
+</div>
+</div>
+</form>
+<div id="formMessage" class="mt-3"></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section text-white text-center py-5">
+<div class="container">
+<div style="animation: fadeInUp 1s ease;">
+<h2 class="display-4 fw-bold mb-4">Don't Miss Out! 🌟</h2>
+<p class="fs-5 mb-5 opacity-90">Limited spots available for Swahili Camp 2025. Register now and give your child an unforgettable summer experience!</p>
+<div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+  <a href="#contact" class="btn btn-hero" style="background: white; color: var(--brand-purple);">
+    Secure Your Spot <i class="fas fa-lock ms-2"></i>
+  </a>
+  <a href="/" class="btn btn-hero" style="background: rgba(255, 255, 255, 0.2); border: 2px solid white;">
+    Learn More <i class="fas fa-arrow-right ms-2"></i>
+  </a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-dark text-white">
+<div class="container py-5">
+<div class="row g-4 mb-4">
+<div class="col-12 col-md-6 col-lg-3">
+<img src="https://d30itml3t0pwpf.cloudfront.net/api/v3/medias/15749245/image/1600x800%3E/1638644834.png" height="40" alt="TAYARI Logo" class="mb-3">
+<p class="text-white-50">Making Swahili learning fun, playful, and meaningful for children worldwide through immersive camp experiences.</p>
+</div>
+<div class="col-6 col-md-6 col-lg-2">
+<h5 class="fw-bold mb-3">Quick Links</h5>
+<ul class="list-unstyled">
+<li class="mb-2"><a href="#dates" class="footer-link">Dates</a></li>
+<li class="mb-2"><a href="#why" class="footer-link">Why Join</a></li>
+<li class="mb-2"><a href="#schedule" class="footer-link">Schedule</a></li>
+<!-- <li class="mb-2"><a href="#pricing" class="footer-link">Pricing</a></li> -->
+<li class="mb-2"><a href="#contact" class="footer-link">Contact</a></li>
+</ul>
+</div>
+<div class="col-6 col-md-6 col-lg-2">
+<h5 class="fw-bold mb-3">Company</h5>
+<ul class="list-unstyled">
+<li class="mb-2"><a href="/" class="footer-link">Home</a></li>
+<li class="mb-2"><a href="https://camp.tayari.live/" class="footer-link">Camp</a></li>
+<li class="mb-2"><a href="https://pricing.tayari.live/" class="footer-link">Plans</a></li>
+<li class="mb-2"><a href="#contact" class="footer-link">Support</a></li>
+</ul>
+</div>
+<div class="col-12 col-md-6 col-lg-3">
+<h5 class="fw-bold mb-3">Get In Touch</h5>
+<ul class="list-unstyled">
+<li class="mb-3">
+<a href="mailto:info@tayari.live" class="footer-link text-white-50 text-decoration-none">
+  <i class="fas fa-envelope me-2" style="color: var(--brand-green);"></i>info@tayari.live
+</a>
+</li>
+<li class="mb-3">
+<a href="tel:+254715349834" class="footer-link text-white-50 text-decoration-none">
+  <i class="fas fa-phone me-2" style="color: var(--brand-green);"></i>+254 715 349 834
+</a>
+</li>
+<li class="mb-3 text-white-50">
+  <i class="fas fa-map-marker-alt me-2" style="color: var(--brand-green);"></i>Diani, Ukunda, Kenya
+</li>
+</ul>
+</div>
+<div class="col-12 col-md-6 col-lg-2">
+<h5 class="fw-bold mb-3">Follow Us</h5>
+<div class="social-icons">
+<a href="https://www.facebook.com/tayarilive/" target="_blank" aria-label="Facebook" class="footer-link"><i class="fab fa-facebook"></i></a>
+<a href="https://www.instagram.com/tayarilive/" target="_blank" aria-label="Instagram" class="footer-link"><i class="fab fa-instagram"></i></a>
+<a href="https://www.youtube.com/@tayarilive-swahililearning1184" target="_blank" aria-label="YouTube" class="footer-link"><i class="fab fa-youtube"></i></a>
+<a href="https://x.com/tayari_live" target="_blank" aria-label="Twitter" class="footer-link"><i class="fab fa-x-twitter"></i></a>
+</div>
+</div>
+</div>
+<hr class="border-secondary opacity-25 my-4">
+<div class="text-center text-white-50 py-3">
+<small>&copy; <span id="year"></span> Tayari.Live. All rights reserved. | <a href="#" class="footer-link text-white-50">Privacy Policy</a> | <a href="#" class="footer-link text-white-50">Terms of Service</a></small>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Set current year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Form submission handler
+document.getElementById('campForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const formData = {
+    childName: document.getElementById('childName').value,
+    age: document.getElementById('age').value,
+    parentName: document.getElementById('parentName').value,
+    email: document.getElementById('email').value,
+    phone: document.getElementById('phone').value,
+    campType: document.getElementById('campType').value,
+    message: document.getElementById('message').value,
+    agree: document.getElementById('agree').checked
+  };
+  
+  // Show success message
+  const formMessage = document.getElementById('formMessage');
+  formMessage.innerHTML = `
+    <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+      <i class="fas fa-check-circle me-3" style="font-size: 1.5rem;"></i>
+      <div>
+        <strong>Registration Received! 🎉</strong><br>
+        Thank you, ${formData.parentName}! We've received your registration and will contact you at ${formData.email} within 24 hours.
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+  
+  // Reset form
+  this.reset();
+  
+  // Scroll to message
+  formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  
+  // Hide message after 6 seconds
+  setTimeout(() => {
+    formMessage.innerHTML = '';
+  }, 6000);
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+      // Close mobile menu if open
+      const navCollapse = document.getElementById('nav');
+      if (navCollapse && navCollapse.classList.contains('show')) {
+        const bsCollapse = new bootstrap.Collapse(navCollapse, { toggle: false });
+        bsCollapse.hide();
+      }
+    }
+  });
+});
+
+// Add animation on scroll for feature cards
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+// Observe all cards and sections
+document.querySelectorAll('.date-card, .feature-card, .testimonial-card, .pricing-card, .schedule-card, .gallery-item').forEach(el => {
+  el.style.opacity = '0';
+  observer.observe(el);
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Gallery modal functionality
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', function() {
+    const img = this.querySelector('img').src;
+    const modal = document.createElement('div');
+    modal.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: fadeInUp 0.3s ease;
+    `;
+    modal.innerHTML = `
+      <div style="position: relative; max-width: 90%; max-height: 90%;">
+        <img src="${img}" style="width: 100%; height: auto; border-radius: 15px;">
+        <button onclick="this.parentElement.parentElement.remove()" style="position: absolute; top: 10px; right: 10px; background: white; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center;">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    modal.addEventListener('click', function(e) {
+      if(e.target === modal) modal.remove();
+    });
+  });
+});
+
+// Add active class to navbar links based on scroll position
+window.addEventListener('scroll', function() {
+  document.querySelectorAll('section[id]').forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.offsetHeight;
+    const scrollPosition = window.scrollY;
+    
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+      const activeLink = document.querySelector(`.nav-link[href="#${section.id}"]`);
+      if (activeLink) activeLink.classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>

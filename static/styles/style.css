@@ -1,0 +1,357 @@
+:root{
+  --brand-pink:#d72a58;
+  --brand-purple:#932390;
+  --brand-green:#8ec83d;
+  --brand-blue:#0777bc;
+  --brand-yellow:#f19707;
+  --brand-orange:#f25925;
+}
+*{font-family:'Poppins',sans-serif}
+h1,h2,h3,h4,h5,h6{font-family:'Quicksand',sans-serif;font-weight:700}
+html, body{overflow-x:hidden;max-width:100%}
+
+/* Navbar Links with Animated Underline */
+.nav-link {
+  position: relative;
+  color: #333 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(135deg,var(--brand-blue),#0560a0);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--brand-blue) !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Language Cards - Updated with flags only */
+.language-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+  width:100%;
+  height:200px;
+  transition:all 0.3s ease;
+  cursor:pointer;
+  justify-self: center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:2rem;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.language-card .flag-emoji {
+  font-size: 3.5rem !important;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Individual language card backgrounds */
+.language-card.swahili {
+  background: linear-gradient(135deg, #00A86B 0%, #008B5E 100%);
+}
+.language-card.yoruba {
+  background: linear-gradient(135deg, #008751 0%, #006B3E 100%);
+}
+.language-card.hausa {
+  background: linear-gradient(135deg, #008751 0%, #006B3E 100%);
+}
+.language-card.zulu {
+  background: linear-gradient(135deg, #007A3D 0%, #005A2D 100%);
+}
+.language-card.krio {
+  background: linear-gradient(135deg, #1EB53A 0%, #138A2B 100%);
+}
+.language-card.shona {
+  background: linear-gradient(135deg, #319F47 0%, #228B3E 100%);
+}
+
+.language-card:hover{
+  transform:translateY(-8px) scale(1.02) rotate(-1deg);
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.language-card .content{
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0.75rem;
+}
+
+.language-card .flag-emoji {
+  font-size: 3.5rem !important;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  font-family: system-ui, -apple-system, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+}
+
+@media(min-width:768px){
+  .language-card .flag-emoji {
+    font-size: 5rem !important;
+  }
+}
+
+.language-card h3 {
+  color: white !important;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  font-size: 1.25rem;
+}
+
+@media(min-width:768px){
+  .language-card h3 {
+    font-size: 1.75rem;
+  }
+}
+
+.badge-playful{
+  background:linear-gradient(135deg,var(--brand-green),#7ab82f);
+  color:white;
+  font-weight:700;
+  padding:6px 16px;
+  font-size:0.8rem;
+}
+
+.badge-coming{
+  background:linear-gradient(135deg,var(--brand-yellow),var(--brand-orange));
+  color:white;
+  font-weight:700;
+  padding:6px 16px;
+  font-size:0.8rem;
+}
+
+/* links in footer */
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--brand-green) !important;
+  text-decoration: underline;
+}
+
+/* Social media icons in footer */
+.footer-social {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-social:hover {
+  color: var(--brand-green) !important;
+  transform: translateY(-3px);
+}
+
+/* Other existing styles would go here - keeping your original CSS */
+.wave-top,.wave-bottom{
+  position:absolute;
+  left:0;
+  width:100%;
+  overflow:hidden;
+  line-height:0;
+}
+.wave-top{top:-1px;}
+.wave-bottom{bottom:-1px;transform:rotate(180deg)}
+.wave-top svg,.wave-bottom svg{
+  position:relative;
+  display:block;
+  width:120%;
+  height:20px;
+}
+@media(min-width:768px){
+  .wave-top svg,.wave-bottom svg{height:80px}
+}
+@media(min-width:992px){
+  .wave-top svg,.wave-bottom svg{height:120px}
+}
+
+.hero-gradient{
+  background:linear-gradient(135deg,var(--brand-purple) 0%,var(--brand-orange) 50%,var(--brand-pink) 100%);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  padding-top:80px;
+  padding-bottom:100px;
+}
+
+.btn-playful{
+  background:linear-gradient(135deg,var(--brand-green),#7ab82f);
+  border:none;
+  color:white;
+  font-weight:600;
+  transition:all 0.3s ease;
+}
+.btn-playful:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(142,200,61,.4);
+  color:white;
+}
+.btn-playful-outline{
+  border:3px solid white;
+  color:white;
+  font-weight:600;
+  transition:all 0.3s ease;
+}
+.btn-playful-outline:hover{
+  background:white;
+  color:var(--brand-blue);
+  transform:translateY(-3px);
+}
+
+.float{
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.float img {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0) rotate(-2deg)}
+  50%{transform:translateY(-30px) rotate(2deg)}
+}
+
+.float{animation:float 6s ease-in-out infinite}
+
+/* Hero image animation */
+.hero-image-animate {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes scaleFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.02) rotate(1deg);
+  }
+}
+
+.navbar{
+  background:white;
+  transition:transform 0.3s ease;
+  position:sticky;
+  top:0;
+  z-index:1030;
+}
+
+.bg-playful-light{
+  background:linear-gradient(135deg,#f8f9ff 0%,#fff5f8 100%);
+}
+.bg-playful-medium{
+  background:linear-gradient(135deg,#fff9f0 0%,#f0f9ff 100%);
+}
+
+.cta-section{
+  background:linear-gradient(135deg,var(--brand-purple),var(--brand-orange),var(--brand-pink));
+  position:relative;
+  padding:100px 0 !important;
+}
+
+.footer-dark{
+  background:linear-gradient(135deg,#1a1a2e,#16213e);
+  position:relative;
+  padding-top:60px;
+}
+
+.feature-card{
+  border-radius:20px;
+  padding:1.5rem;
+  background:white;
+  border:none;
+  transition:all 0.3s ease;
+  position:relative;
+  overflow:hidden;
+  height:100%;
+}
+.feature-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+.feature-icon{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 1rem;
+  font-size:1.5rem;
+  color:white;
+}
+
+.step-card{
+  border-radius:24px;
+  padding:1.5rem;
+  transition:all 0.3s ease;
+  position:relative;
+  overflow:hidden;
+  border:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+.step-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+.step-number{
+  width:60px;
+  height:60px;
+  font-size:2rem;
+  font-weight:900;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:1rem;
+  color:white;
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+  font-family:'Quicksand',sans-serif;
+  flex-shrink:0;
+}
+
+.step-card-1{background:linear-gradient(135deg,#ffe8f0,#fff)}
+.step-card-1 .step-number{background:linear-gradient(135deg,var(--brand-orange),#c21e4a)}
+.step-card-2{background:linear-gradient(135deg,#f0ffe8,#fff)}
+.step-card-2 .step-number{background:linear-gradient(135deg,var(--brand-green),#7ab82f)}
+.step-card-3{background:linear-gradient(135deg,#fff8e8,#fff)}
+.step-card-3 .step-number{background:linear-gradient(135deg,var(--brand-yellow),#d98606)}
+.step-card-4{background:linear-gradient(135deg,#e8f3ff,#fff)}
+.step-card-4 .step-number{background:linear-gradient(135deg,var(--brand-blue),#0560a0)}
+
+.video-wrapper{
+  background:linear-gradient(135deg,var(--brand-blue), navy);
+  padding:6px;
+  border-radius:24px;
+  box-shadow:0 15px 40px rgba(62, 130, 238, 0.3);
+}
+
+@media(min-width:992px){
+  .step-offset-right{margin-left:10%}
+  .step-offset-left{margin-right:10%}
+}
