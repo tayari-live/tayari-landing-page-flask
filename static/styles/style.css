@@ -353,7 +353,7 @@ html, body{overflow-x:hidden;max-width:100%}
   overflow: hidden;
 }
 
-/* .video-wrapper .ratio {
+.video-wrapper .ratio {
   width: 100%;
 }
 
@@ -362,10 +362,11 @@ html, body{overflow-x:hidden;max-width:100%}
   height: 100%;
   display: block;
   border-radius: 20px;
-} */
+}
 
 @media(min-width:992px){
   .step-offset-right{margin-left:10%}
   .step-offset-left{margin-right:10%}
 
 }
+
